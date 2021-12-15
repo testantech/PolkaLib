@@ -17,11 +17,9 @@ class CallingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.libview)
-
         webvw = findViewById<WebView>(R.id.webvw)
 
-
-        webvw.addJavascriptInterface(  JavaScriptInterface(this), "Android");
+        webvw.addJavascriptInterface(JavaScriptInterface(this), "Android");
         webvw.getSettings().setJavaScriptEnabled(true)
 
 
